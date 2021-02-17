@@ -19,7 +19,7 @@ from rest_framework import routers
 from core import views
 
 router = routers.DefaultRouter()
-router.register(r'chirps', views.ChirpViewSet)
+router.register(r'chirps', views.ChirpViewSet, basename='chirps')
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
