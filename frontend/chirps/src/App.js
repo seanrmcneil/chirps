@@ -1,12 +1,15 @@
+import React, { Component, Fragment } from "react";
 import Chirps from "./components/Chirps";
 
-function App() {
-  return (
-    <div>
+class App extends Component {
+  render() {
+    return (
+    <Fragment>
       <h1>Chirps</h1>
       <Chirps></Chirps>
-    </div>
+    </Fragment>
   );
+  }
 }
 
 export default App;
