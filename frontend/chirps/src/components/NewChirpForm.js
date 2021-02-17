@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 
 import axios from "axios";
 
-import { API_URL } from "../constants";
+import { API_URL, PUSH_URL } from "../constants";
 
 class NewChirpForm extends React.Component {
   state = {
@@ -26,8 +26,15 @@ class NewChirpForm extends React.Component {
     e.preventDefault();
     axios.post(API_URL, this.state).then(() => {
       this.props.refreshChirps();
+      this.sendPush();
     });
   };
+
+  sendPush = () => {
+    axios.post(PUSH_URL, this.state).then((res) => {
+      console.log(res);
+    });
+  }
 
   render() {
     return (
