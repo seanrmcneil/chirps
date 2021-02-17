@@ -4,6 +4,7 @@ from django.db import models
 class Chirp(models.Model):
     id = models.AutoField(primary_key=True)
     text = models.CharField(max_length=140)
+    upvotes = models.IntegerField(default=0)
 
     class Meta:
         managed = True
