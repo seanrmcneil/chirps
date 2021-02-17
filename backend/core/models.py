@@ -7,3 +7,4 @@ class Chirp(models.Model):
 
     class Meta:
         managed = True
+        ordering = ('-id',)
