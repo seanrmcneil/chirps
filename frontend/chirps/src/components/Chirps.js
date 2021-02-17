@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Chirp from "./Chirp";
 import './Chirps.css';
 
 class Chirps extends Component {
@@ -9,7 +10,7 @@ class Chirps extends Component {
       <div>
           <ul className="chirps">
           { chirps.map((chirp) => (
-                <li key={chirp.id}>{chirp.id} -- {chirp.text}</li>
+            <Chirp refreshChirps={this.props.refreshChirps} key={chirp.id} chirp={chirp}></Chirp>
             ))
           }
         </ul>

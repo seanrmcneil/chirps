@@ -26,7 +26,7 @@ class App extends Component {
     return (
     <Fragment>
       <h1>Chirps</h1>
-      <Chirps chirps={this.state.chirps}>
+      <Chirps chirps={this.state.chirps} refreshChirps={this.refreshChirps}>
       </Chirps>
       <NewChirpForm  refreshChirps={this.refreshChirps}></NewChirpForm>
     </Fragment>
